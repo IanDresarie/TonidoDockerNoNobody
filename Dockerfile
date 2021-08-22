@@ -11,10 +11,10 @@ ENV LD_LIBRARY_PATH=/usr/local/tonido
 
 # Configure user nobody to match unRAID's settings
  RUN \
- usermod -u 99 nobody && \
- usermod -g 100 nobody && \
- usermod -d /config nobody && \
- chown -R nobody:users /home
+ usermod -u 99 tonido && \
+ usermod -g 100 tonido && \
+ usermod -d /config tonido && \
+ chown -R tonido:users /home
  
  # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
